@@ -33,6 +33,8 @@ input,textarea,button{font:inherit}
 input:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:2px solid #6B1F2A;outline-offset:2px}
 [hidden]{display:none!important}
 #cover:focus{outline:none}
+.theme{font-family:'Great Vibes','Tiro Devanagari Hindi',cursive;font-size:34px;line-height:1.05}
+html[lang=hi] .theme{font-size:26px;line-height:1.3}
 html[lang=hi] [style*="italic"],html[lang=hi] .serif{font-style:normal!important}
 .card{background:#FBF7EE;border:1px solid #B08A3E}
 .lbl{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#7C5E22}
@@ -84,7 +86,6 @@ html[lang=hi] [style*="italic"],html[lang=hi] .serif{font-style:normal!important
 <main id="content" hidden>
 <section id="cover" class="reveal" style="padding:20px 16px 28px">
 <div class="card" style="position:relative; outline:1px solid #B08A3E; outline-offset:-9px; padding:34px 24px; text-align:center; box-shadow:0 8px 22px rgba(70,35,20,.10)">
-<div style="position:absolute; top:22px; left:20px; width:62px; height:62px; border-radius:50%; outline:1.5px solid rgba(107,31,42,.55); display:flex; flex-direction:column; align-items:center; justify-content:center; transform:rotate(-14deg); color:rgba(107,31,42,.75); font-size:9px; letter-spacing:1px; line-height:1.2"><span data-t="kotaCaps"></span><span>28.01.27</span></div>
 <p style="margin:0; font-family:'Tiro Devanagari Hindi',serif; font-size:17px; color:#7C5E22">॥ शुभ विवाह ॥</p>
 <div style="margin:18px auto 22px; width:210px; height:270px; border-radius:105px 105px 6px 6px; border:2px solid #B08A3E; padding:6px">
 <img src="assets/arch.jpg" alt="Shantanu and Aastha under a floral arch" style="display:block; width:100%; height:100%; border-radius:99px 99px 3px 3px; object-fit:cover; object-position:50% 32%">
@@ -235,11 +236,11 @@ const T = {
 const KOTA_MAP = 'https://share.google/lZyjKpHr7sdCT6ZLe';
 const LKO_MAP = 'https://share.google/JcE5yRADAzD5PU4sK';
 const EV = [
-  { k:'Haldi', pm:'28.01.27', city:'kota', map:KOTA_MAP, en:{ n:'Haldi Carnival', d:'Thursday, 28 January', t:'11:00 AM', l:'Turmeric, games and plenty of laughter — wear your pastels and come ready to get a little yellow!', v:'Menaal Residency, Kota', dc:'Dress code · Pastel colours' }, hi:{ n:'हल्दी कार्निवल', d:'गुरुवार, 28 जनवरी', t:'सुबह 11:00', l:'हल्दी, खेल और ढेर सारे ठहाके — पेस्टल पहनकर आइए और थोड़ा पीला होने को तैयार रहिए!', v:'मेनाल रेज़िडेंसी, कोटा', dc:'परिधान · पेस्टल रंग' } },
-  { k:'Tilak', pm:'28.01.27', city:'kota', map:KOTA_MAP, en:{ n:'Tilak', d:'Thursday, 28 January', t:'4:00 PM', l:'Aastha’s family blesses Shantanu with tilak and welcomes him into their own.', v:'Menaal Residency, Kota' }, hi:{ n:'तिलक', d:'गुरुवार, 28 जनवरी', t:'शाम 4:00', l:'आस्था का परिवार शांतनु को तिलक लगाकर आशीर्वाद देगा और अपना बनाएगा।', v:'मेनाल रेज़िडेंसी, कोटा' } },
-  { k:'Ring', pm:'28.01.27', city:'kota', map:KOTA_MAP, en:{ n:'Ring Ceremony & Sangeet', d:'Thursday, 28 January', t:'7:00 PM', l:'Rings are exchanged, then the music takes over — bring your best dance moves.', v:'Menaal Residency, Kota' }, hi:{ n:'सगाई एवं संगीत', d:'गुरुवार, 28 जनवरी', t:'शाम 7:00', l:'अंगूठियों की रस्म के बाद संगीत की महफ़िल — अपने सबसे अच्छे ठुमके साथ लाइए।', v:'मेनाल रेज़िडेंसी, कोटा' } },
-  { k:'Baraat', pm:'29.01.27', city:'kota', map:KOTA_MAP, en:{ n:'Baraat & Wedding Ceremony', d:'Friday, 29 January', t:'11:00 AM', l:'Dance with the baraat, then witness the pheras as two families become one.', v:'Menaal Residency, Kota' }, hi:{ n:'बारात एवं विवाह', d:'शुक्रवार, 29 जनवरी', t:'सुबह 11:00', l:'बारात में जमकर नाचिए, फिर फेरों के साक्षी बनिए जब दो परिवार एक होंगे।', v:'मेनाल रेज़िडेंसी, कोटा' } },
-  { k:'Reception', pm:'31.01.27', city:'lucknow', map:LKO_MAP, en:{ n:'Reception', d:'Sunday, 31 January', t:'7:30 PM', l:'An evening in Lucknow to celebrate the newlyweds — dinner, music and our dearest people.', v:'Radisson Hotel Lucknow City Center' }, hi:{ n:'रिसेप्शन', d:'रविवार, 31 जनवरी', t:'शाम 7:30', l:'लखनऊ में नवदम्पति के सम्मान में एक शाम — भोजन, संगीत और अपनों का साथ।', v:'रैडिसन होटल लखनऊ सिटी सेंटर' } }
+  { k:'Haldi', pm:'28.01.27', city:'kota', map:KOTA_MAP, en:{ n:'Haldi Carnival', th:'Rang Barse', d:'Thursday, 28 January', t:'11:00 AM', l:'Turmeric, games and plenty of laughter — wear your pastels and come ready to get a little yellow!', v:'Menaal Residency, Kota', dc:'Dress code · Pastel colours' }, hi:{ n:'हल्दी कार्निवल', th:'रंग बरसे', d:'गुरुवार, 28 जनवरी', t:'सुबह 11:00', l:'हल्दी, खेल और ढेर सारे ठहाके — पेस्टल पहनकर आइए और थोड़ा पीला होने को तैयार रहिए!', v:'मेनाल रेज़िडेंसी, कोटा', dc:'परिधान · पेस्टल रंग' } },
+  { k:'Tilak', pm:'28.01.27', city:'kota', map:KOTA_MAP, en:{ n:'Tilak', th:'Shubh Aarambh', d:'Thursday, 28 January', t:'4:00 PM', l:'Aastha’s family blesses Shantanu with tilak and welcomes him into their own.', v:'Menaal Residency, Kota' }, hi:{ n:'तिलक', th:'शुभ आरंभ', d:'गुरुवार, 28 जनवरी', t:'शाम 4:00', l:'आस्था का परिवार शांतनु को तिलक लगाकर आशीर्वाद देगा और अपना बनाएगा।', v:'मेनाल रेज़िडेंसी, कोटा' } },
+  { k:'Ring', pm:'28.01.27', city:'kota', map:KOTA_MAP, en:{ n:'Ring Ceremony & Sangeet', th:'Shaam Shaandar', d:'Thursday, 28 January', t:'7:00 PM', l:'Rings are exchanged, then the music takes over — bring your best dance moves.', v:'Menaal Residency, Kota' }, hi:{ n:'सगाई एवं संगीत', th:'शाम शानदार', d:'गुरुवार, 28 जनवरी', t:'शाम 7:00', l:'अंगूठियों की रस्म के बाद संगीत की महफ़िल — अपने सबसे अच्छे ठुमके साथ लाइए।', v:'मेनाल रेज़िडेंसी, कोटा' } },
+  { k:'Baraat', pm:'29.01.27', city:'kota', map:KOTA_MAP, en:{ n:'Baraat & Wedding Ceremony', th:'Din Shagna Da', d:'Friday, 29 January', t:'11:00 AM', l:'Dance with the baraat, then witness the pheras as two families become one.', v:'Menaal Residency, Kota' }, hi:{ n:'बारात एवं विवाह', th:'दिन शगना दा', d:'शुक्रवार, 29 जनवरी', t:'सुबह 11:00', l:'बारात में जमकर नाचिए, फिर फेरों के साक्षी बनिए जब दो परिवार एक होंगे।', v:'मेनाल रेज़िडेंसी, कोटा' } },
+  { k:'Reception', pm:'31.01.27', city:'lucknow', map:LKO_MAP, en:{ n:'Reception', th:'Jashn-e-Bahar', d:'Sunday, 31 January', t:'7:30 PM', l:'An evening in Lucknow to celebrate the newlyweds — dinner, music and our dearest people.', v:'Radisson Hotel Lucknow City Center' }, hi:{ n:'रिसेप्शन', th:'जश्न-ए-बहार', d:'रविवार, 31 जनवरी', t:'शाम 7:30', l:'लखनऊ में नवदम्पति के सम्मान में एक शाम — भोजन, संगीत और अपनों का साथ।', v:'रैडिसन होटल लखनऊ सिटी सेंटर' } }
 ];
 const PAL = {
   Haldi:['#F6DE9E','#FBEDC6','#8A5A10','#5C3A08','#6E4A10'],
@@ -272,11 +273,12 @@ function renderEvents() {
     return `${divider}<article class="reveal" style="background:#FBF7EE; border:1px solid #B08A3E; overflow:hidden; box-shadow:0 6px 16px rgba(70,35,20,.08)">
 <div style="display:flex; align-items:center; gap:14px; padding:14px 16px; border-bottom:1px solid #B08A3E; background:${p[0]}">
 <div style="flex:none; width:58px; height:68px; border:4px dotted ${p[0]}; outline:1px solid rgba(43,33,27,.22); display:flex; align-items:center; justify-content:center; background:${p[1]}; color:${p[2]}"><svg width="38" height="38" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[e.k]}</svg></div>
-<div style="flex:1; min-width:0"><p style="margin:0; font-size:12px; font-weight:500; letter-spacing:1.2px; text-transform:uppercase; color:${p[4]}">${esc(x.d)} · ${esc(x.t)}</p><h3 class="serif" style="margin:2px 0 0; font-weight:600; font-size:25px; line-height:1.15; color:${p[3]}">${esc(x.n)}</h3></div>
+<div style="flex:1; min-width:0"><p class="theme" style="margin:0; color:${p[3]}">${esc(x.th)}</p><h3 class="serif" style="margin:2px 0 0; font-weight:600; font-size:20px; line-height:1.2; color:${p[3]}">${esc(x.n)}</h3></div>
 </div>
 <div style="padding:14px 18px 12px">
-<p class="serif" style="margin:0; font-style:italic; font-size:18px; line-height:1.4">${esc(x.l)}</p>
-<p style="margin:10px 0 0; display:flex; align-items:center; gap:6px; font-size:14px; color:#5E4E3E"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>${esc(x.v)}</p>
+<p style="margin:0; display:flex; align-items:center; gap:8px; font-size:15px; font-weight:500; color:#2B211B"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B1F2A" stroke-width="1.8" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>${esc(x.d)} · ${esc(x.t)}</p>
+<p style="margin:6px 0 0; display:flex; align-items:center; gap:8px; font-size:14px; color:#5E4E3E"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B1F2A" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>${esc(x.v)}</p>
+<p class="serif" style="margin:12px 0 0; padding-top:12px; border-top:1px dashed #D2BC8E; font-style:italic; font-size:18px; line-height:1.4">${esc(x.l)}</p>
 ${dress}
 <div style="display:flex; align-items:center; justify-content:space-between; margin-top:10px; padding-top:8px; border-top:1px dashed #D2BC8E">
 <a href="${e.map}" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:6px; min-height:44px; font-size:14px; font-weight:500; color:#6B1F2A"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>${esc(t.directions)}</a>
